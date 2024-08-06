@@ -1,0 +1,60 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nextlabs-enforcer-service
+  labels:
+    app: nextlabs-enforcer-service
+    app.kubernetes.io/managed-by: "Helm"
+  namespace: enforcer
+spec:
+  ports:
+  - name: http
+    port: 7080
+    targetPort: 8181
+  type: ClusterIP
+  selector:
+    app: nextlabs-enforcer-service
+---
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: nextlabs-enforcer-service
+  labels:
+    app: nextlabs-enforcer-service
+  namespace: enforcer
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nextlabs-enforcer-service
+  template:
+    metadata:
+      labels:
+        app: nextlabs-enforcer-service
+    spec:
+      containers:
+        - name: nextlabs-enforcer-service
+          image: enforcer/enforcer:0.0.1
+          imagePullPolicy: Never
+          ports:
+          - containerPort: 8181
+          env:
+          - name: TZ
+            value: UTC
+          - name: JWT_SECRET
+            valueFrom:
+              secretKeyRef:
+                name: {{ .Release.Name }}-jwt-secret
+                key: nextlabs.enforcer.jwt.key
+          volumeMounts:
+          - name: config-volume
+            mountPath: /app/openaz-pep-rest.properties
+            subPath: openaz-pep-rest.properties
+      volumes:
+      - name: config-volume
+        configMap:
+          name: enforcer-configmap
+          items:
+          - key: openaz-pep-rest.properties
+            path: openaz-pep-rest.properties
+
