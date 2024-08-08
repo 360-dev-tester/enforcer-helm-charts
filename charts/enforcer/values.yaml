@@ -8,6 +8,17 @@ image:
   imagePullSecret: nextlabs-registry-credentials
   pullPolicy: Always
   repository: registry.nextlabs.com/apigee-enforcer
+
+# Update the pod configuration with insecureSkipTLSVerify
+podConfig:
+  containers:
+    - name: enforcer-container
+      image: "{{ .Values.repository }}:latest"  # Assuming latest tag
+      imagePullSecret: "{{ .Values.imagePullSecret }}"
+      env:
+      - name: insecureSkipTLSVerify
+        value: "true"  # Disabling TLS verification (Not Recommended)
+
 nextlabs:
   cc:
     configService:
