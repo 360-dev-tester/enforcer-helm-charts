@@ -5,8 +5,9 @@
 replicaCount: 1
 
 image:
-  repository: registry.nextlabs.com1/platform
-  pullPolicy: IfNotPresent
+  imagePullSecret: nextlabs-registry-credentials
+  pullPolicy: Always
+  repository: registry.nextlabs.com/apigee-enforcer
   # Overrides the image tag whose default is the chart appVersion.
   tag: "1.0.0"
 
