@@ -7,7 +7,7 @@ autoscaling:
 image:
   imagePullSecret: nextlabs-registry-credentials
   pullPolicy: Always
-  repository: registry.nextlabs.com/platform
+  repository: registry.nextlabs.com/apigee-enforcer
 nextlabs:
   cc:
     configService:
