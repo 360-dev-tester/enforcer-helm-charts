@@ -5,9 +5,9 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
   targetMemoryUtilizationPercentage: 80
 image:
-  imagePullSecret: null
-  pullPolicy: null
-  repository: null
+  imagePullSecret: nextlabs-registry-credentials
+  pullPolicy: Always
+  repository: registry.nextlabs.com/platform
 nextlabs:
   cc:
     configService:
