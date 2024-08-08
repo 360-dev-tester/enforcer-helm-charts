@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
         - name: nextlabs-enforcer-service
-          image: enforcer/enforcer:0.0.1
+          image: apigee-enforcer/enforcer:0.0.1
           imagePullPolicy: Never
           ports:
           - containerPort: 8181
