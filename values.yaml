@@ -11,9 +11,6 @@ image:
   # Overrides the image tag whose default is the chart appVersion.
   tag: "1.0.0"
 
-imagePullSecrets: []
-nameOverride: ""
-fullnameOverride: ""
 
 serviceAccount:
   # Specifies whether a service account should be created
