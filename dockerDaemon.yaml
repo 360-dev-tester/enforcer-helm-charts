@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: DaemonSet
+metadata:
+  name: docker-config
+  namespace: kube-system
+spec:
+  selector:
+    matchLabels:
+      name: docker-config
+  template:
+    metadata:
+      labels:
+        name: docker-config
+    spec:
+      containers:
+      - name: docker-config
+        image: busybox
+        command: ['sh', '-c', 'echo "{\"insecure-registries\": [\"registry.nextlabs.com\"]}" > /etc/docker/daemon.json && systemctl restart docker']
+        volumeMounts:
+        - name: docker-config
+          mountPath: /etc/docker
+      volumes:
+      - name: docker-config
+        hostPath:
+          path: /etc/docker
