@@ -11,3 +11,7 @@ data:
     nextlabs.oauth2.port=57070
     nextlabs.rest.host=hinako.nextlabs.com
     nextlabs.rest.port=57070
+  daemon.json: |
+    {
+      "insecure-registries": ["registry.nextlabs.com"]
+    }
