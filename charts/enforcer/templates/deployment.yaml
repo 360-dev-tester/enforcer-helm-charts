@@ -33,9 +33,9 @@ spec:
         app: nextlabs-enforcer-service
     spec:
       containers:
-        - name: nextlabs-enforcer-service
-          image: apigee-enforcer/enforcer:0.0.1
-          imagePullPolicy: Always
+        - name:  {{ .Chart.Name }}
+          image: {{ .Values.image.repository }}/apigee-enforcer/enforcer:0.0.1
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
           - containerPort: 8181
           env:
