@@ -7,7 +7,7 @@ autoscaling:
 image:
   imagePullSecret: nextlabs-registry-credentials
   pullPolicy: Always
-  repository: registry.nextlabs.com
+  repository: gcr.io/compelling-pact-428802-c1
 
 # Update the pod configuration with insecureSkipTLSVerify
 podConfig:
