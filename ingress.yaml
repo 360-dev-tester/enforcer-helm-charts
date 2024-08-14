@@ -13,4 +13,4 @@ spec:
               service:
                 name: nextlabs-enforcer-service
                 port:
-                  number: 8181
+                  number: 7080
