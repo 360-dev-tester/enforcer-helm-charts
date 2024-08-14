@@ -7,7 +7,7 @@ replicaCount: 1
 image:
   imagePullSecret: nextlabs-registry-credentials
   pullPolicy: Always
-  repository: registry.nextlabs.com
+  repository: gcr.io/compelling-pact-428802-c1
   # Overrides the image tag whose default is the chart appVersion.
   tag: "1.0.0"
 
