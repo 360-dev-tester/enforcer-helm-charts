@@ -34,7 +34,7 @@ spec:
     spec:
       containers:
         - name:  {{ .Chart.Name }}
-          image: {{ .Values.image.repository }}/apigee-enforcer/enforcer:0.0.1
+          image: {{ .Values.image.repository }}/enforcer-project/enforcer:0.0.1
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
           - containerPort: 8181
