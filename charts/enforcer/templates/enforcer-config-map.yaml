@@ -11,7 +11,3 @@ data:
     nextlabs.oauth2.port=57070
     nextlabs.rest.host=a198-118-189-171-229.ngrok-free.app
     nextlabs.rest.port=57070
-  daemon.json: |
-    {
-      "insecure-registries": ["registry.nextlabs.com"]
-    }
