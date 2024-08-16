@@ -8,6 +8,6 @@ data:
     nextlabs.oauth2.client_id=apiclient
     nextlabs.oauth2.client_secret=123Blue!123
     nextlabs.oauth2.server=a198-118-189-171-229.ngrok-free.app
-    nextlabs.oauth2.port=57070
+    nextlabs.oauth2.port=443
     nextlabs.rest.host=a198-118-189-171-229.ngrok-free.app
-    nextlabs.rest.port=57070
+    nextlabs.rest.port=443
