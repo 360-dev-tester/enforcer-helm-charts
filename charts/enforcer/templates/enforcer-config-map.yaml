@@ -7,9 +7,9 @@ data:
   openaz-pep-rest.properties: |
     nextlabs.oauth2.client_id=apiclient
     nextlabs.oauth2.client_secret=123Blue!123
-    nextlabs.oauth2.server=2331-118-189-171-229.ngrok-free.app
+    nextlabs.oauth2.server=db0e-118-189-171-229.ngrok-free.app
     nextlabs.oauth2.port=443
     nextlabs.oauth2.https=true
-    nextlabs.rest.host=2331-118-189-171-229.ngrok-free.app
+    nextlabs.rest.host=db0e-118-189-171-229.ngrok-free.app
     nextlabs.rest.port=443
     nextlabs.rest.https=true
