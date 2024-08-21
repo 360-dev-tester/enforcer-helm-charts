@@ -48,7 +48,7 @@ spec:
                 key: nextlabs.enforcer.jwt.key
           volumeMounts:
           - name: config-volume
-            mountPath: /app/openaz-pep-rest.properties
+            mountPath: /app/enforcer/openaz-pep-rest.properties
             subPath: openaz-pep-rest.properties
       volumes:
       - name: config-volume
