@@ -7,12 +7,12 @@ data:
   openaz-pep-rest.properties: |
     nextlabs.pdp.engine.name=com.nextlabs.openaz.pdp.RestPDPEngine
     nextlabs.rest.payload_content_type=application/json
-    nextlabs.rest.host=db0e-118-189-171-229.ngrok-free.app
+    nextlabs.rest.host=bfba-118-189-171-229.ngrok-free.app
     nextlabs.rest.port=443
     nextlabs.rest.https=true
     nextlabs.rest.auth_type=OAUTH2
     nextlabs.oauth2.grant_type=client_credentials
-    nextlabs.oauth2.server=db0e-118-189-171-229.ngrok-free.app
+    nextlabs.oauth2.server=bfba-118-189-171-229.ngrok-free.app
     nextlabs.oauth2.port=443
     nextlabs.oauth2.https=true
     nextlabs.oauth2.client_id=apiclient
